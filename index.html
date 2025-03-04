@@ -1,25 +1,90 @@
 <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
 <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
 <df-messenger
   location="us-central1"
   project-id="project-conversational-bot"
   agent-id="98c6d08e-6bc6-4a3f-b85c-4280f652c791"
   language-code="en"
   max-query-length="-1">
-  <df-messenger-chat-bubble
-   chat-title="Project Bot">
+  <df-messenger-chat-bubble chat-title="Project Bot">
   </df-messenger-chat-bubble>
 </df-messenger>
+
 <style>
+  /* Base Chatbot Styles */
   df-messenger {
-    z-index: 999;
+    z-index: 9999;
     position: fixed;
-    --df-messenger-font-color: #000;
-    --df-messenger-font-family: Google Sans;
-    --df-messenger-chat-background: #f3f6fc;
-    --df-messenger-message-user-background: #d3e3fd;
-    --df-messenger-message-bot-background: #fff;
-    bottom: 16px;
-    right: 16px;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s ease-out forwards;
+    
+    --df-messenger-font-color: #333;
+    --df-messenger-font-family: "Google Sans", Arial, sans-serif;
+    --df-messenger-chat-background: #f9f9f9;
+    --df-messenger-message-user-background: #007bff; /* User messages in blue */
+    --df-messenger-message-bot-background: #e9ecef; /* Bot messages in light gray */
+    --df-messenger-button-titlebar-color: #007bff; /* Chat header color */
+    --df-messenger-button-titlebar-font-color: #ffffff; /* Header text color */
+    --df-messenger-chat-bubble-background: #007bff; /* Bubble icon color */
+    --df-messenger-chat-bubble-font-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Hover Effect on Chat Bubble */
+  df-messenger-chat-bubble:hover {
+    animation: bounce 0.4s ease-in-out;
+    cursor: pointer;
+  }
+
+  /* Smooth Slide-in When Chat Opens */
+  df-messenger[opened] {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 768px) {
+    df-messenger {
+      bottom: 10px;
+      right: 10px;
+      width: 90%;
+      max-height: 80vh;
+    }
   }
 </style>
