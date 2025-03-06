@@ -24,16 +24,150 @@
   }
 </style>
 
-<html>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Project Bot</title>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Care</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #222;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo span {
+            color: #35b77f;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #222;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #35b77f;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #35b77f;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #2ea167;
+        }
+
+        .hero img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            margin-top: 30px;
+        }
+
+    </style>
 </head>
-<body>  
+<body>
 
-  <h1>Project Bot</h1>  
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">COMMON <span>CARE</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Online Therapy</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Our Providers</a></li>
+            <li><a href="#">Community Corner</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
 
-  <p>This is a project bot.</p>
-  
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Online Therapy In The Comfort Of Your Home</h1>
+            <p>Take charge of your mental well-being</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+        <img src="https://cdn.dribbble.com/users/1162077/screenshots/4701261/online_consultation_2x.png" alt="Online Therapy">
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 Common Care. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
