@@ -194,6 +194,19 @@
             }
         }
 
+        .chat-instruction {
+             
+                background-color: #35b77f;
+                color: white;
+                padding: 8px 12px;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: bold;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            } 
+
+
+
     </style>
 </head>
 <body>
@@ -216,7 +229,9 @@
         <div class="hero-left">
             <h1>Online Therapy In The Comfort Of Your Home</h1>
             <p>Take charge of your mental well-being</p>
-            <a href="#" class="cta-button">Get Started</a>
+            <div class="chat-instruction">
+                💬 Type <strong>"Hello"</strong> to start the conversation!
+            </div>
 
             <!-- Image Block -->
             <div class="image-block-wrapper">
@@ -227,6 +242,7 @@
 
         <!-- Right Side: Chatbot -->
         <div class="chat-container">
+           
             <df-messenger
                 location="us-central1"
                 project-id="round-fusion-452109-e2"
